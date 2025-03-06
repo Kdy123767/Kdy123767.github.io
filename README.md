@@ -23,3 +23,18 @@ This is an H1
 - 빨강
   - 녹색
     - 파랑
+
+[link keyword][id]
+
+[id]: URL "Optional Title here"
+
+// code
+Link: [Google][googlelink]
+
+[googlelink]: https://google.com "Go google"
+
+
+![Alt text](/path/to/![202212008462_500](https://github.com/user-attachments/assets/c71cc488-d243-46cc-8ba5-9531f6cffd58)
+)
+![Alt text](/path/to/![202212008462_500](https://github.com/user-attachments/assets/29bb5d91-a847-4fe0-a0f0-4adbaa8360e2)
+ "Optional title")
