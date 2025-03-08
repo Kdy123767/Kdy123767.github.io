@@ -24,6 +24,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,6 +92,8 @@ tr:nth-child(even) {
 
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -129,6 +133,46 @@ tr:nth-child(even) {
         우리 일상과 밀접한 관계를 맺고 있는 인터넷 및 WWW 이해, 개발자로서의 웹 프로그래밍 이론과 관련 기술 습득, 웹 프로그래밍 언어 이해와, 이를 바탕으로 HTML&CSS과 Javascript를 살펴보고, PHP 프로그래밍 기법 학습, MySQL 연동을 통해 웹 프로그래밍에서 데이터베이스를 이용하는 방법 습득한다.</p>
   </div>
 </div>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stanford Performing Arts</title>
+</head>
+<body>
+    <h1 style="color: #ff0000;">Stanford Performing Arts</h1>
+    <p style="text-align: right; color: red;">Autumn 2012 Edition</p>
+
+    <h2>Bing Concert Hall</h2>
+    
+    <table width="100%">
+        <tr>
+            <td style="width: 50%; vertical-align: top;">
+                <p>The Bing Concert Hall at Stanford will play a vital role on campus and in the local community. The halls exceptional acoustics and state-of-the-art technical capabilities will showcase the world's finest performers.</p>
+                <p>The hall is scheduled to open early in 2013. The concert hall will have 844 seats in an intimate vineyard-style configuration, with terraced sections wrapping all the way around the stage.</p>
+            </td>
+
+            <td style="width: 50%; vertical-align: top; padding-left: 20px;">
+                <h3>Calendar</h3>
+                <hr>
+                <p><i>Harmony for Humanity: Daniel Pearl World Music Concert</i></p>
+                <hr>
+                <p><i>Sundays with the St. Lawrence String Quartet</i></p>
+                <hr>
+                <p><i>Merce Cunningham Dance Company</i></p>
+                <hr>
+                <p><i>Juilliard String Quartet</i></p>
+                <hr>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
