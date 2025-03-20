@@ -10,4 +10,3 @@
 
 [**homework2-4**](https://Kdy123767.github.io/homework2-4.html)
 
-[**css_demo**](https://Kdy123767.github.io/css_demo.html)
