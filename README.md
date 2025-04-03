@@ -11,3 +11,5 @@
 [**homework2-4**](https://Kdy123767.github.io/homework2-4.html)
 
 [**homework3-1**](https://Kdy123767.github.io/20250403_114811.png)
+
+[**homework3-2**](https://Kdy123767.github.io/20250403_121441.png)
