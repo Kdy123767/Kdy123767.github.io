@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+
+<?php
+$pi=3.14;
+$triangle=$width*$height/2;
+$rectangle=$width*$height;
+$circle=$pi*$radius*$radius;
+$cuboid=$width*$length1*$length2;
+$cylinder=$pi*$radius*$radius*$height;
+$sphere=(3/4)*$pi*$padius*$padius*$padius;
+echo("삼각형 <b>". $_GET["triangle"]);
+echo("직사각형 <b>". $_GET["rectangle"]);
+echo("원 <b>". $_GET["circle"]);
+echo("직육면체 <b>". $_GET["cuboid"]);
+echo("원통 <b>". $_GET["cylinder"]);
+echo("구 <b>". $_GET["sphere"]);
+?>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body></body>
+</html>
+
+<form method="GET" action="formcgi.php">
+밑변: <input type="text" name="width"><br>
+높이: <input type="text" name="height"><br>
+반지름: <input type="text" name="radius"><br>
+가로: <input type="text" name="length1"><br>
+세로: <input type="text" name="length2"><br>
+<input type="submit" value="전송">
+
+</form>
+
