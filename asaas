@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"></head>
+<head><meta charset="utf-8"><title>도형 계산기</title></head>
 <body>
 
+<h2>도형 계산 결과</h2>
+
 <?php
-$pi=3.14;
-$triangle=$width*$height/2;
-$rectangle=$width*$height;
-$circle=$pi*$radius*$radius;
-$cuboid=$width*$length1*$length2;
-$cylinder=$pi*$radius*$radius*$height;
-$sphere=(3/4)*$pi*$padius*$padius*$padius;
-echo("삼각형 <b>". $_GET["triangle"]);
-echo("직사각형 <b>". $_GET["rectangle"]);
-echo("원 <b>". $_GET["circle"]);
-echo("직육면체 <b>". $_GET["cuboid"]);
-echo("원통 <b>". $_GET["cylinder"]);
-echo("구 <b>". $_GET["sphere"]);
+$pi = 3.14;
+
+// 입력값 가져오기 (isset이나 ?? 없이 바로 사용)
+$width = $_GET["width"];
+$height = $_GET["height"];
+$radius = $_GET["radius"];
+$length1 = $_GET["length1"];
+$length2 = $_GET["length2"];
+
+// 계산
+$triangle = $width * $height / 2;
+$rectangle = $width * $height;
+$circle = $pi * $radius * $radius;
+$cuboid = $width * $length1 * $length2;
+$cylinder = $pi * $radius * $radius * $height;
+$sphere = (4/3) * $pi * $radius * $radius * $radius;
+
+// 출력
+echo "<p>삼각형 면적: <b>$triangle</b></p>";
+echo "<p>직사각형 면적: <b>$rectangle</b></p>";
+echo "<p>원 면적: <b>$circle</b></p>";
+echo "<p>직육면체 체적: <b>$cuboid</b></p>";
+echo "<p>원통 체적: <b>$cylinder</b></p>";
+echo "<p>구 체적: <b>$sphere</b></p>";
 ?>
 
 </body>
 </html>
+
+
+
+<form method="GET" action="formcgi.php">
+  <h2>도형 계산기</h2>
+  밑변/가로 (width): <input type="text" name="width"><br>
+  높이 (height): <input type="text" name="height"><br>
+  반지름 (radius): <input type="text" name="radius"><br>
+  직육면체 - 가로 (length1): <input type="text" name="length1"><br>
+  직육면체 - 세로 (length2): <input type="text" name="length2"><br>
+  <input type="submit" value="계산하기">
+</form>
+
+
+
+
+
+
 
 
 
@@ -30,17 +61,75 @@ echo("구 <b>". $_GET["sphere"]);
 
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"></head>
-<body></body>
-</html>
+<head>
+  <meta charset="utf-8">
+  <title>간단한 피보나치 수열 계산기</title>
+</head>
+<body>
 
-<form method="GET" action="formcgi.php">
-밑변: <input type="text" name="width"><br>
-높이: <input type="text" name="height"><br>
-반지름: <input type="text" name="radius"><br>
-가로: <input type="text" name="length1"><br>
-세로: <input type="text" name="length2"><br>
-<input type="submit" value="전송">
+<h2>피보나치 수열 계산기</h2>
 
+<form method="GET">
+  n (1~100): <input type="number" name="n" min="1" max="100" required>
+  <input type="submit" value="계산">
 </form>
 
+<?php
+if (isset($_GET["n"])) {
+  $n = $_GET["n"];
+  
+  if ($n < 1 || $n > 100) {
+    echo "<p> 1~100 사이의 정수만 입력하세요.</p>";
+    exit;
+  }
+
+  $a = 0;
+  $b = 1;
+
+  echo "<h3>수열:</h3>";
+  echo "$a ";
+
+  for ($i = 1; $i < $n; $i++) {
+    echo "$b ";
+    $temp = $a + $b;
+    $ratio = $b != 0 ? round($temp / $b, 5) : "undefined";
+    $a = $b;
+    $b = $temp;
+  }
+
+  echo "<h3>앞뒤 비율:</h3>";
+  $a = 0;
+  $b = 1;
+
+  for ($i = 1; $i < $n; $i++) {
+    $ratio = $a != 0 ? round($b / $a, 5) : "계산 불가";
+    echo "{$b} / {$a} = $ratio<br>";
+    $temp = $a + $b;
+    $a = $b;
+    $b = $temp;
+  }
+}
+?>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>피보나치 수열 계산기</title>
+</head>
+<body>
+
+<h2>피보나치 수열 계산기</h2>
+<form method="GET" action="fibonacci_result.php">
+  n (100 이하 정수): <input type="number" name="n" min="1" max="100" required><br>
+  <input type="submit" value="계산하기">
+</form>
+
+</body>
+</html>
