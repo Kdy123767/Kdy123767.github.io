@@ -20,6 +20,4 @@
 
 [**homework3-5**](https://Kdy123767.github.io/20250409_104106.png)
 
-
 [**homework4**](https://www.youtube.com/watch?v=7gAfUdSqpE8)
-[![유튜브 영상 보기](https://img.youtube.com/vi/7gAfUdSqpE8/hqdefault.jpg)](https://www.youtube.com/watch?v=7gAfUdSqpE8)
