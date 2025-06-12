@@ -21,5 +21,3 @@
 [**homework3-5**](https://Kdy123767.github.io/20250409_104106.png)
 
 [**homework4**](https://www.youtube.com/watch?v=7gAfUdSqpE8)
-
-[**voronoi**](https://Kdy123767.github.io/Voronoi.html)
